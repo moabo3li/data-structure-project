@@ -1,6 +1,6 @@
 #include <iostream>
 #include "clsDblLinkedList.h"
-#include <chrono>
+
 using namespace std;
 int main()
 {
@@ -17,11 +17,7 @@ int main()
 	MydblLinkedList.PrintList();
 
 	clsDblLinkedList<int >::Node* N;
-	auto start = std::chrono::high_resolution_clock::now();
 	
-	auto end = std::chrono::high_resolution_clock::now();
-	std::chrono::duration<double> duration = end - start;
-	std::cout << "Time taken: " << duration.count() << " seconds" << std::endl;
 	
 	return 0;
 }
