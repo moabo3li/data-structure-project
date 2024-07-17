@@ -23,5 +23,8 @@
     <ClInclude Include="clsDblLinkedList.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="clsMyQueue.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
