@@ -107,9 +107,9 @@ public:
 		if (head == NULL)
 			return;
 		Node* temp = head;
-		head->next = head->next;
+		head = head->next;
 		if (head)
-			head->prev == NULL;
+			head->prev = NULL;
 		delete temp;
 		_Size--;
 
