@@ -20,10 +20,27 @@ int main()
 
     MyDynamicArray.PrintList();
 
-    MyDynamicArray.DeleteItemAt(2);
-    cout << "\nArray Items after deleting item(2): \n";
+    MyDynamicArray.InsertAtBeginning(400);
+    cout << "\n\nArray after insert 400 at Begining:";
     cout << "\nArray Size: " << MyDynamicArray.Size() << "\n";
     MyDynamicArray.PrintList();
+
+    MyDynamicArray.InsertBefore(2, 500);
+    cout << "\n\nArray after insert 500 before index 2:";
+    cout << "\nArray Size: " << MyDynamicArray.Size() << "\n";
+    MyDynamicArray.PrintList();
+
+    MyDynamicArray.InsertAfter(2, 600);
+    cout << "\n\nArray after insert 600 after index 2:";
+    cout << "\nArray Size: " << MyDynamicArray.Size() << "\n";
+    MyDynamicArray.PrintList();
+
+
+    MyDynamicArray.InsertAtEnd(800);
+    cout << "\n\nArray after insert 800 at End:";
+    cout << "\nArray Size: " << MyDynamicArray.Size() << "\n";
+    MyDynamicArray.PrintList();
+
 
     system("pause>0");
 
