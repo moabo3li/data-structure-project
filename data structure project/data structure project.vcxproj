@@ -130,10 +130,14 @@
     <ClCompile Include="Source.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="binarySearchTreeType.h" />
     <ClInclude Include="clsDblLinkedList.h" />
     <ClInclude Include="clsDynamicArray.h" />
     <ClInclude Include="clsMyQueue.h" />
+    <ClInclude Include="clsMyQueueArr.h" />
     <ClInclude Include="clsMyStack.h" />
+    <ClInclude Include="clsMyStackArr.h" />
+    <ClInclude Include="clsMyString.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
