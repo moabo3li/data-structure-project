@@ -1,5 +1,6 @@
 #pragma once
 #include<iostream>
+#include<queue>
 using namespace std;
 
 class binarySearchTreeType
@@ -26,6 +27,7 @@ public:
 	
 	static BstNode* Insert(BstNode *&Root,int value)
 	{
+		
 		if (!Root)
 		{
 			Root = new BstNode;
@@ -44,9 +46,9 @@ public:
 		}
 		return Root;
 	}
-
 	void Insert(int value)
 	{
+		_size++;
 		Insert(root, value);
 	}
 
@@ -115,9 +117,65 @@ public:
 		return height(root);
 	}
 
+	static void Printlevel_order(BstNode* Root)
+	{
+		queue<BstNode*> temp_q;
+		temp_q.push(Root);
+		while (!temp_q.empty())
+		{
+			BstNode* current = temp_q.front();
+			cout << current->value << " ";
+			if (current->left)
+				temp_q.push(current->left);
+			if (current->right)
+				temp_q.push(current->right);
+			temp_q.pop();
+		}
+		cout << endl;
+	}
+	void Printlevel_order()
+	{
+		Printlevel_order(root);
+	}
 
+	static void Print_Preorder(BstNode* Root)
+	{
+		if (!Root) return;
+		cout << Root->value << " ";
+		Print_Preorder(Root->left);
+		Print_Preorder(Root->right);
+	}
+	void Print_Preorder()
+	{
+		Print_Preorder(root);
+	}
 
+	static void Print_Inorder(BstNode* Root)
+	{
+		if (!Root) return;
+		Print_Inorder(Root->left);
+		cout << Root->value << " ";
+		Print_Inorder(Root->right);
+	}
+	void Print_Inorder()
+	{
+		Print_Inorder(root);
+	}
+	
+	static void Print_Postorder(BstNode* Root)
+	{
+		if (!Root) return;
+		Print_Postorder(Root->left);
+		Print_Postorder(Root->right);
+		cout << Root->value << " ";
+	}
+	void Print_Postorder()
+	{
+		Print_Postorder(root);
+	}
 
+	 
+	  
 private:
 	void destroy(BstNode* node)
 	{

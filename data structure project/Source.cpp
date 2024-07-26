@@ -1,19 +1,20 @@
 #include<iostream>
+#include<cstdlib>
 #include"binarySearchTreeType.h"
+
 using namespace std;
 int main()
 {
+	srand(time(0));
 	binarySearchTreeType tree;
-	tree.Insert(30);
-	tree.Insert(20);
-	tree.Insert(10);
-	tree.Insert(5);
-	tree.Insert(8);
-	tree.Insert(2);
-	tree.Insert(1);
-	tree.Insert(65);
-	tree.Insert(34);
-	tree.Insert(13);
+	int n;
+	for(int i =0;i<10000;i++)
+	{
+		n = rand();
+		tree.Insert(n);
+	}
+	tree.Printlevel_order();
+	
 	cout << tree.Search(13) << endl;
 	cout << tree.FindMin() << endl;
 	cout << tree.FindMax() << endl;
